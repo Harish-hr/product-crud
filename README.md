@@ -8,8 +8,8 @@ Operations: Supports creating new products, viewing existing product details and
 Angular Framework: Leverages the Angular framework for building a dynamic and responsive web application.
 
 # Getting Started
-* **Step 1:** * Istall Docker Desktop on the local machine
-* **Step 2:** * Clone or download the repo.
-* **Step 3:** * Navigate to the directory where Dockerfile located
-* **Step 4:** * Execute command "docker compose up -d"
-* **Step 5:** * Hit url on the browser "http://localhost:8081/products" - It will show product list page.
+* **Step 1:**  Istall Docker Desktop on the local machine
+* **Step 2:**  Clone or download the repo.
+* **Step 3:**  Navigate to the directory where Dockerfile located
+* **Step 4:**  Execute command "docker compose up -d"
+* **Step 5:**  Hit url on the browser "http://localhost:8081/products" - It will show product list page.
