@@ -1,0 +1,8 @@
+version: "3.9"  # Or later
+services:
+  product-crud:
+    build:
+      context: . # . refers to the directory containing the Dockerfile
+      dockerfile: Dockerfile # Or specify the path if it's not named Dockerfile
+    ports:
+      - "8081:80"  # Map host port 8080 to container port 80

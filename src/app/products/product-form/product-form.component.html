@@ -1,0 +1,23 @@
+<div class="product-form">
+    <h2>{{ isEditMode ? 'Edit Product' : 'Add New Product' }}</h2>
+    <form (ngSubmit)="saveProduct()">
+      <label for="name">Name:</label>
+      <input id="name" [(ngModel)]="product.name" name="name" required />
+
+      <label for="name">Type:</label>
+      <input id="type" [(ngModel)]="product.type" name="type" required />
+  
+      <label for="price">Price:</label>
+      <input id="price" [(ngModel)]="product.price" name="price" type="number" required />
+
+      <label for="name">Picture:</label>
+      <input id="type" [(ngModel)]="product.picture" name="Picture" required />
+
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="product.description" name="description"></textarea>
+  
+      <button type="submit">Save</button>
+      <button type="button" (click)="router.navigate(['/products'])">Cancel</button>
+    </form>
+  </div>
+  

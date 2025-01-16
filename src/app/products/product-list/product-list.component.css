@@ -1,0 +1,31 @@
+:host {
+    display: block;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  .product-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .create-product-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .create-product-link:hover {
+    background-color: #218838;
+  }
+    

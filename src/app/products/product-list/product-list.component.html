@@ -1,0 +1,70 @@
+<div class="container">
+  <h2>Product List</h2>
+  <!-- Search Box -->
+  <div>
+    <input
+      type="text"
+      placeholder="Search by Product Name"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="onSearchChange()"
+      class="search-box"
+    />
+  </div>
+  <div class="product-list-header">
+    <h1>Product List</h1>
+    <a routerLink="/products/new" class="create-product-link">+ Create Product</a>
+  </div>
+  <!-- Product Table -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th (click)="sortBy('name')">
+            Name
+            <span>
+              <i *ngIf="sortField === 'name' && sortDirection === 'asc'" class="arrow-up active">&#9650;</i>
+              <i *ngIf="sortField === 'name' && sortDirection === 'desc'" class="arrow-down active">&#9660;</i>
+              <i *ngIf="sortField !== 'name'" class="arrow-placeholder">&#8597;</i>  <!-- Placeholder arrow -->
+            </span>
+          </th>
+          <th (click)="sortBy('type')">
+            Type
+            <span>
+              <i *ngIf="sortField === 'type' && sortDirection === 'asc'" class="arrow-up active">&#9650;</i>
+              <i *ngIf="sortField === 'type' && sortDirection === 'desc'" class="arrow-down active">&#9660;</i>
+              <i *ngIf="sortField !== 'type'" class="arrow-placeholder">&#8597;</i>  <!-- Placeholder arrow -->
+            </span>
+          </th>
+          <th>Description</th>
+          <th>Picture</th>
+          <th (click)="sortBy('price')">
+            Price
+            <span>
+              <i *ngIf="sortField === 'price' && sortDirection === 'asc'" class="arrow-up active">&#9650;</i>
+              <i *ngIf="sortField === 'price' && sortDirection === 'desc'" class="arrow-down active">&#9660;</i>
+              <i *ngIf="sortField !== 'price'" class="arrow-placeholder">&#8597;</i>  <!-- Placeholder arrow -->
+            </span>
+          </th>        
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of displayedProducts"> 
+          <td>{{ product.name }}</td>
+          <td>{{ product.type }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.picture }}</td>
+          <td>{{ product.price }}</td>
+          <td>
+            <button routerLink="/products/{{ product.id }}/edit">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>
