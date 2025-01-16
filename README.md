@@ -8,8 +8,8 @@ Operations: Supports creating new products, viewing existing product details and
 Angular Framework: Leverages the Angular framework for building a dynamic and responsive web application.
 
 # Getting Started
-* **Step 1:**  Istall Docker Desktop on the local machine
-* **Step 2:**  Clone or download the repo.
-* **Step 3:**  Navigate to the directory where Dockerfile located
-* **Step 4:**  Execute command "docker compose up -d"
-* **Step 5:**  Hit url on the browser "http://localhost:8081/products" - It will show product list page.
+* **Step 1:** Install Docker Desktop Ensure Docker Desktop is installed and running on your local machine. This includes both the Docker engine and Docker Compose.
+* **Step 2:** Clone the Repository: Clone the repository containing the Dockerfile and docker-compose.yaml file to your local machine using a Git client or download it as a zip archive and extract it.
+* **Step 3:** Navigate to the Project Directory: Open a terminal or command prompt and navigate to the directory containing the Dockerfile and docker-compose.yaml file. This is the root directory of your project.
+* **Step 4:** Build and Run with Docker Compose: Execute the command docker compose up.
+* **Step 5:** Hit URL http://localhost:8081/products on the browser 
